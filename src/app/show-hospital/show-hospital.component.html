@@ -1,0 +1,21 @@
+<h3 align = "center">Hospital Database</h3>
+<table class="table table-striped">
+  <tr>
+    <th>SI. No</th>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Contact Person</th>
+    <th>Phone</th>
+  </tr>
+  <tr *ngFor='let eachHospital of hospitals'>
+    <td>{{eachHospital.id}}</td>
+    <td>{{eachHospital.name}}</td>
+    <td>{{eachHospital.location}}</td>
+    <td>{{eachHospital.contactPerson}}</td>
+    <td>{{eachHospital.phone}}</td>
+  </tr>
+</table>
+<div class="text-center">
+<button (click)='showHosp()' class="btn btn-success">Show Hospitals</button>
+<button [disabled]='resetDisabled' (click)='clearHosp()' class="btn btn-danger">Clear ME</button>
+</div>

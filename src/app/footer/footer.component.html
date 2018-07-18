@@ -1,0 +1,22 @@
+<div class="row">
+<div class="col col-md-6">
+    <app-app-list-items [listItems]='partners' [src]="'pVal'"
+      (childResult)="evalChild($event)"></app-app-list-items>
+</div>
+<div class="col col-md-6">
+    <app-app-list-items [listItems]='social' [src]="'sVal'" (childResult)="evalChild($event)"></app-app-list-items>  
+</div>
+<div class="col col-md-6">
+    <p>{{msg}}</p>  
+</div>
+</div>
+<div>
+
+    <label>UserName :  </label>
+    <input  [(ngModel)]="nameModel" placeholder="Enter UserName" (keyup)='newMessage(nameModel)'>
+    <!--input [(ngModel)]="nameModel" placeholder="Enter UserName"-->
+       
+    
+  </div>
+
+

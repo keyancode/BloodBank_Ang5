@@ -1,0 +1,23 @@
+<h3 align = "center">Donar Database</h3>
+<table class="table table-striped">
+  <tr>
+    <th>SI. No</th>
+    <th>Name</th>
+    <th>Number</th>
+    <th>Age</th>
+    <th>Blood Group</th>
+    <th>Location</th>
+  </tr>
+  <tr *ngFor='let eachDonar of bloodDonars'>
+    <td>{{eachDonar.id}}</td>
+    <td>{{eachDonar.name}}</td>
+    <td>{{eachDonar.mobileNumber}}</td>
+    <td>{{eachDonar.age}}</td>
+    <td>{{eachDonar.bgroup}}</td>
+    <td>{{eachDonar.location}}</td>
+  </tr>
+</table>
+<div class="text-center"> 
+<button (click)='show()' class="btn btn-success">Show Donars</button>
+<button [disabled]='resetDisabled' (click)='clear()' class="btn btn-danger">Clear ME</button>
+</div>
